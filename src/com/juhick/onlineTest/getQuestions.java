@@ -33,6 +33,8 @@ public class getQuestions extends javax.servlet.http.HttpServlet {
         Connection conn = null;
         Statement stmt = null;
 
+        int qNumber = 0;
+
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
@@ -61,6 +63,7 @@ public class getQuestions extends javax.servlet.http.HttpServlet {
 
                 input iq = new input(qId, lContent, rContent);
                 inputList.add(iq);
+                qNumber++;
             }
 
             //单选题
@@ -76,6 +79,7 @@ public class getQuestions extends javax.servlet.http.HttpServlet {
 
                 choice scq = new choice(qId,qName, choiceA, choiceB, choiceC, choiceD);
                 singleChoiceList.add(scq);
+                qNumber++;
             }
 
             //多选题
@@ -91,6 +95,7 @@ public class getQuestions extends javax.servlet.http.HttpServlet {
 
                 choice scq = new choice(qId,qName, choiceA, choiceB, choiceC, choiceD);
                 multiChoiceList.add(scq);
+                qNumber++;
             }
 
             //判断题
@@ -102,6 +107,7 @@ public class getQuestions extends javax.servlet.http.HttpServlet {
 
                 check cq = new check(qId, qName);
                 checkList.add(cq);
+                qNumber++;
             }
 
             rs.close();
@@ -132,6 +138,7 @@ public class getQuestions extends javax.servlet.http.HttpServlet {
         context.setAttribute("singleChoices", singleChoiceList);
         context.setAttribute("multiChoices", multiChoiceList);
         context.setAttribute("check", checkList);
+        context.setAttribute("qNumber", qNumber);
         RequestDispatcher rd = request.getRequestDispatcher("jsp/test.jsp");
         rd.forward(request, response);
 

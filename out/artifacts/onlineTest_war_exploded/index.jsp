@@ -12,7 +12,7 @@
 %>
 <html>
   <head>
-      <title>在线智力测试系统</title>
+      <title>在线测试系统</title>
       <link href="assets/pages/css/index.css" rel="stylesheet" type="text/css">
       <base href="<%=basePath%>">
   </head>

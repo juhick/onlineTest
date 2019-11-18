@@ -1,5 +1,6 @@
 package com.juhick.onlineTest;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,6 +45,10 @@ public class getScore extends HttpServlet {
         List<check> checkList = (List<check>) context.getAttribute("check");
         Connection conn = null;
         Statement stmt = null;
+        int qNumber = (int) context.getAttribute("qNumber");
+        double minusScore = 100.0 / (double)qNumber;
+        double score = 100;
+        //System.out.println("每题分数为：" + minusScore);
 
         try{
             Class.forName(JDBC_DRIVER);
@@ -63,11 +68,13 @@ public class getScore extends HttpServlet {
                     String anwser = rs.getString("anwser").strip();
                     if (anwser.equals(ans)){
                         System.out.println("填空题第" + iq.getqId() + "正确");
+                    } else {
+                        System.out.println("填空题第" + iq.getqId() + "错误， 扣" + minusScore + "分");
+                        score -= minusScore;
                     }
                 }
 
-
-                System.out.println(ans);
+                //System.out.println(ans);
             }
 
             for(choice sc : singleChoiceList){
@@ -80,10 +87,13 @@ public class getScore extends HttpServlet {
                     String anwser = rs.getString("anwser").strip();
                     if (anwser.equals(ans)){
                         System.out.println("单选题第" + sc.getqId() + "正确");
+                    }else {
+                        System.out.println("单选题第" + sc.getqId() + "错误， 扣" + minusScore + "分");
+                        score -= minusScore;
                     }
                 }
 
-                System.out.println(ans);
+                //System.out.println(ans);
             }
 
             for(choice mc : multiChoiceList){
@@ -94,7 +104,7 @@ public class getScore extends HttpServlet {
                     System.out.print(anw);
                 }
 
-                System.out.println();
+                //System.out.println();
 
                 sql = "SELECT anwser FROM multiChoice WHERE qId=" + mc.getqId();
                 rs = stmt.executeQuery(sql);
@@ -103,6 +113,9 @@ public class getScore extends HttpServlet {
                     String anwser = rs.getString("anwser").strip();
                     if (anwser.contentEquals(result)){
                         System.out.println("多选题第" + mc.getqId() + "正确");
+                    }else {
+                        System.out.println("多选题第" + mc.getqId() + "错误， 扣" + minusScore + "分");
+                        score -= minusScore;
                     }
                 }
             }
@@ -117,10 +130,13 @@ public class getScore extends HttpServlet {
                     String anwser = rs.getString("anwser").strip();
                     if (anwser.equals(ans)){
                         System.out.println("判断题第" + ck.getqId() + "正确");
+                    }else {
+                        System.out.println("判断题第" + ck.getqId() + "错误， 扣" + minusScore + "分");
+                        score -= minusScore;
                     }
                 }
 
-                System.out.println(ans);
+                //System.out.println(ans);
             }
 
             assert rs != null;
@@ -146,8 +162,9 @@ public class getScore extends HttpServlet {
             }
         }
 
-
-
+        request.setAttribute("score", score);
+        RequestDispatcher rd = request.getRequestDispatcher("jsp/result.jsp");
+        rd.forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
