@@ -23,74 +23,76 @@
     </script>
 </head>
 <body>
-<form onsubmit="return checkFull()" action="Result" method="post">
-    <div class="main">
-        <div class="content">
-            <div class="timeCount">
-                <h3>剩余时间: <span id="hour">2</span>时<span id="minutes">00</span>分<span id="second">00</span>秒</h3>
-            </div>
-            <div class="container">
-                <h4>一、填空题</h4>
-                <ol id="inputQ">
-                    <jsp:useBean id="input" scope="application" type="java.util.List"/>
-                    <c:forEach items="${input}" var="input">
-                        <li>
-                            <span>${input.lContent}</span>
+<div class="main">
+    <form class="information" onsubmit="return checkFull()" action="Result" method="post">
+            <div class="content">
+                <div class="top">
+                    <h2>在线测试系统</h2>
+                    <h3>剩余时间: <span id="hour">2</span>时<span id="minutes">00</span>分<span id="second">00</span>秒</h3>
+                </div>
+                <div class="container">
+                    <h4>一、填空题</h4>
+                    <ol id="inputQ">
+                        <jsp:useBean id="input" scope="application" type="java.util.List"/>
+                        <c:forEach items="${input}" var="input">
+                            <li>
+                                <span>${input.lContent}</span>
                                 <input class="iq" type="text" name="i${input.qId}">
-                            <span>${input.rContent}</span>。
-                        </li>
-                    </c:forEach>
-                </ol>
+                                <span>${input.rContent}</span>。
+                            </li>
+                        </c:forEach>
+                    </ol>
+                </div>
+                <div class="container">
+                    <h4>二、单选题</h4>
+                    <ol id="singleChoice">
+                        <jsp:useBean id="singleChoices" scope="application" type="java.util.List"/>
+                        <c:forEach items="${singleChoices}" var="singleChoice">
+                            <li>
+                                <p>${singleChoice.qName}</p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="A">A.${singleChoice.choiceA}
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="B">B.${singleChoice.choiceB}
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="C">C.${singleChoice.choiceC}
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="D">D.${singleChoice.choiceD}
+                            </li>
+                        </c:forEach>
+                    </ol>
+                </div>
+                <div class="container">
+                    <h4>三、多选题</h4>
+                    <ol id="multiChoice">
+                        <jsp:useBean id="multiChoices" scope="application" type="java.util.List"/>
+                        <c:forEach items="${multiChoices}" var="multiChoice">
+                            <li>
+                                <p>${multiChoice.qName}</p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="A">A.${multiChoice.choiceA}
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="B">B.${multiChoice.choiceB}
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="C">C.${multiChoice.choiceC}
+                                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="D">D.${multiChoice.choiceD}
+                            </li>
+                        </c:forEach>
+                    </ol>
+                </div>
+                <div class="container">
+                    <h4>四、判断题</h4>
+                    <ol id="checkQ">
+                        <jsp:useBean id="check" scope="application" type="java.util.List"/>
+                        <c:forEach items="${check}" var="check">
+                            <li>
+                                <span>${check.qName}</span>
+                                <input type="radio" name="ck${check.qId}" value="T">T
+                                <input type="radio" name="ck${check.qId}" value="F">F
+                            </li>
+                        </c:forEach>
+                    </ol>
+                </div>
+                <div class="bt">
+                    <input type="submit" value="提交">
+                    <input type="reset" value="重置">
+                </div>
             </div>
-            <div class="container">
-                <h4>二、单选题</h4>
-                <ol id="singleChoice">
-                    <jsp:useBean id="singleChoices" scope="application" type="java.util.List"/>
-                    <c:forEach items="${singleChoices}" var="singleChoice">
-                        <li>
-                            <p>${singleChoice.qName}</p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="A">A.${singleChoice.choiceA}
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="B">B.${singleChoice.choiceB}
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="C">C.${singleChoice.choiceC}
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sc${singleChoice.qId}" value="D">D.${singleChoice.choiceD}
-                        </li>
-                    </c:forEach>
-                </ol>
-            </div>
-            <div class="container">
-                <h4>三、多选题</h4>
-                <ol id="multiChoice">
-                    <jsp:useBean id="multiChoices" scope="application" type="java.util.List"/>
-                    <c:forEach items="${multiChoices}" var="multiChoice">
-                        <li>
-                            <p>${multiChoice.qName}</p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="A">A.${multiChoice.choiceA}
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="B">B.${multiChoice.choiceB}
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="C">C.${multiChoice.choiceC}
-                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="mc${multiChoice.qId}" value="D">D.${multiChoice.choiceD}
-                        </li>
-                    </c:forEach>
-                </ol>
-            </div>
-            <div class="container">
-                <h4>四、判断题</h4>
-                <ol id="checkQ">
-                    <jsp:useBean id="check" scope="application" type="java.util.List"/>
-                    <c:forEach items="${check}" var="check">
-                        <li>
-                            <span>${check.qName}</span>
-                            <input type="radio" name="ck${check.qId}" value="T">T
-                            <input type="radio" name="ck${check.qId}" value="F">F
-                        </li>
-                    </c:forEach>
-                </ol>
-            </div>
-            <div class="bt">
-                <input type="submit" value="提交">
-                <input type="reset" value="重置">
-            </div>
-        </div>
-    </div>
-</form>
+    </form>
+</div>
+
 </body>
 </html>

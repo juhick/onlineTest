@@ -101,7 +101,7 @@ public class getScore extends HttpServlet {
                 String[] anws = request.getParameterValues("mc" + mc.getqId());
                 for (String anw : anws) {
                     result.append(anw);
-                    System.out.print(anw);
+                    //System.out.print(anw);
                 }
 
                 //System.out.println();
@@ -163,7 +163,7 @@ public class getScore extends HttpServlet {
         }
 
         request.setAttribute("score", score);
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB_INF/jsp/result.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
         rd.forward(request, response);
     }
 
