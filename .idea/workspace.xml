@@ -6,7 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04335fcf-e6e0-489b-8575-cb67f1412138" name="Default Changelist" comment="" />
+    <list default="true" id="04335fcf-e6e0-489b-8575-cb67f1412138" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/jsp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/juhick/onlineTest/getScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/juhick/onlineTest/getScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/test.jsp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +29,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -31,7 +40,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1TTOQ7xba5zzilDGD6YGZQyYyvt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chatting" />
@@ -153,11 +164,22 @@
       <workItem from="1573893520665" duration="12583000" />
       <workItem from="1573980390615" duration="617000" />
       <workItem from="1573991409374" duration="6279000" />
-      <workItem from="1574053095455" duration="3283000" />
+      <workItem from="1574053095455" duration="5572000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

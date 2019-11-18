@@ -36,7 +36,7 @@
                 </ol>
             </div>
             <div class="container">
-                <h4>二、选择题</h4>
+                <h4>二、单选题</h4>
                 <ol id="singleChoice">
                     <jsp:useBean id="singleChoices" scope="application" type="java.util.List"/>
                     <c:forEach items="${singleChoices}" var="singleChoice">
