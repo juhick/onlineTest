@@ -40,3 +40,17 @@ function checkFull() {
 
     return true;
 }
+
+function countTime() {
+    var nowTime = Date.now();
+
+    var timediff = Math.round((endTime - nowTime) / 1000);
+
+    var hour = parseInt(timediff/3600);
+    var minutes = parseInt(timediff % 3600/60);
+    var second = timediff % 3600 % 60;
+
+    document.getElementById("hour").innerText = hour;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("second").innerText = second;
+}

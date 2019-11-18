@@ -14,14 +14,21 @@
 <html>
 <head>
     <title>在线测试系统</title>
-    <link type="text/css" href="../assets/pages/css/test.css" rel="stylesheet">
-    <script src="../assets/pages/js/test.js"></script>
+    <link type="text/css" href="../../assets/pages/css/test.css" rel="stylesheet">
+    <script src="../../assets/pages/js/test.js"></script>
     <base href="<%=basePath%>">
+    <script>
+        var endTime = Date.now() + 2 * 3600 * 1000;
+        setInterval("countTime();", 1000);
+    </script>
 </head>
 <body>
 <form onsubmit="return checkFull()" action="Result" method="post">
     <div class="main">
         <div class="content">
+            <div class="timeCount">
+                <h3>剩余时间: <span id="hour">2</span>时<span id="minutes">00</span>分<span id="second">00</span>秒</h3>
+            </div>
             <div class="container">
                 <h4>一、填空题</h4>
                 <ol id="inputQ">

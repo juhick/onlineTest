@@ -139,7 +139,7 @@ public class getQuestions extends javax.servlet.http.HttpServlet {
         context.setAttribute("multiChoices", multiChoiceList);
         context.setAttribute("check", checkList);
         context.setAttribute("qNumber", qNumber);
-        RequestDispatcher rd = request.getRequestDispatcher("jsp/test.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/test.jsp");
         rd.forward(request, response);
 
     }

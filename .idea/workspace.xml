@@ -7,20 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04335fcf-e6e0-489b-8575-cb67f1412138" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/assets/pages/css/result.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/result.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/WEB-INF/classes/com/juhick/onlineTest/getQuestions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/WEB-INF/classes/com/juhick/onlineTest/getQuestions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/WEB-INF/classes/com/juhick/onlineTest/getScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/WEB-INF/classes/com/juhick/onlineTest/getScore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/assets/pages/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/assets/pages/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/assets/pages/css/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/assets/pages/css/test.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/assets/pages/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/assets/pages/js/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/onlineTest/com/juhick/onlineTest/getQuestions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/onlineTest/com/juhick/onlineTest/getQuestions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/onlineTest/com/juhick/onlineTest/getScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/onlineTest/com/juhick/onlineTest/getScore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/onlineTest_war_exploded/jsp/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/juhick/onlineTest/getQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/juhick/onlineTest/getQuestions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/juhick/onlineTest/getScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/juhick/onlineTest/getScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/pages/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/pages/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/pages/css/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/pages/css/test.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/pages/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/pages/js/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/test.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +61,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\onlineTest\web\jsp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\onlineTest\web\assets\pages\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\onlineTest\web\WEB-INF\jsp" />
+      <recent name="D:\IdeaProjects\onlineTest\web\WEB-INF" />
+      <recent name="D:\IdeaProjects\onlineTest\web\jsp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -173,7 +174,7 @@
       <workItem from="1573893520665" duration="12583000" />
       <workItem from="1573980390615" duration="617000" />
       <workItem from="1573991409374" duration="6279000" />
-      <workItem from="1574053095455" duration="6772000" />
+      <workItem from="1574053095455" duration="11398000" />
     </task>
     <servers />
   </component>

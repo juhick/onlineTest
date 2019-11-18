@@ -14,7 +14,7 @@
 <head>
     <title>在线测试系统</title>
     <base href="<%=basePath%>">
-    <link href="../assets/pages/css/result.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/pages/css/result.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="main">

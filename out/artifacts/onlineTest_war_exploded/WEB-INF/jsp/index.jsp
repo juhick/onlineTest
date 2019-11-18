@@ -13,13 +13,14 @@
 <html>
   <head>
       <title>在线测试系统</title>
-      <link href="assets/pages/css/index.css" rel="stylesheet" type="text/css">
+      <link href="../../assets/pages/css/index.css" rel="stylesheet" type="text/css">
       <base href="<%=basePath%>">
   </head>
   <body>
     <div class="main">
-        <div class="content" id="single-list">
+        <div class="content">
             <a href="onlineTest">开始测试</a>
+            <p>测试时长2小时</p>
         </div>
     </div>
   </body>

@@ -163,7 +163,7 @@ public class getScore extends HttpServlet {
         }
 
         request.setAttribute("score", score);
-        RequestDispatcher rd = request.getRequestDispatcher("jsp/result.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB_INF/jsp/result.jsp");
         rd.forward(request, response);
     }
 
